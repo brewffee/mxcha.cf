@@ -1,87 +1,116 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
-
-    <title>☕ mxcha.cf ☕</title>
-
-</head>
-
-<body>
-    <div class=nav-underlay></div>
-    <div class=navbar></div>
-    <div class=content>
-        <div class=head>mxcha.cf</div>
-        <div class=divisor>
-            <div class=divisor-line></div>
-            <div class=divisor-icon id=cards></div>
-            <div class=divisor-line></div>
-        </div>
-        <div class=card-row>
-            <div class=card-o-outer>
-                <i class='fab fa-github fa-2x'></i>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
+        <title>☕ mxcha.cf ☕</title>
+    </head>
+    <body>
+        <div class=nav-underlay></div>
+        <div class=navbar></div>
+        <div class=content>
+            <div class=head>mxcha.cf</div>
+            <div class=divisor>
+                <div class=divisor-line></div>
+                <div class=divisor-icon id=cards></div>
+                <div class=divisor-line></div>
             </div>
-            <div class=card-o-inner>
-                <i class='fab fa-twitter fa-2x'></i>
-            </div>
-            <div class=card-o-outer>
-                <i class='fab fa-discord fa-2x'></i>
-            </div>
-        </div>
-        <div class=card-row>
-            <div class=card-e-outer>
-                <i class='fab fa-youtube fa-2x'></i>
-            </div>
-            <div class=card-e-inner>
-                <i class='fab fa-steam fa-2x'></i>
-            </div>
-            <div class=card-e-outer>
-                <i class='fab fa-telegram fa-2x'></i>
-            </div>
-        </div>
-        <div class=divisor style="margin-top: 32px;">
-            <div class=divisor-line></div>
-            <div class=divisor-icon id=quick-links></div>
-            <div class=divisor-line></div>
-        </div>
-        <div class=quick-links>
-            <div class=quick-link-card>
-                <div class=preview></div>
-                <div class=quick-link-detail>
-                    <span class=quick-link-title>
-                        Title
-                    </span>
-                    <span class=quick-link-description>
-                        Description
-                    </span>
+            <div class=card-row>
+                <div class=card-o-outer onclick="alert('open the gh popup')">
+                    <i class='fab fa-github fa-2x'></i>
                 </div>
-                <div class=quick-link-action></div>
+                <div class=card-o-inner onclick="alert('open the twt popup')">
+                    <i class='fab fa-twitter fa-2x'></i>
+                </div>
+                <div class=card-o-outer onclick="alert('open the disc popup')">
+                    <i class='fab fa-discord fa-2x'></i>
+                </div>
+            </div>
+            <div class=card-row>
+                <div class=card-e-outer onclick="alert('open the yt popup')">
+                    <i class='fab fa-youtube fa-2x'></i>
+                </div>
+                <div class=card-e-inner onclick="alert('open the steam popup')">
+                    <i class='fab fa-steam fa-2x'></i>
+                </div>
+                <div class=card-e-outer onclick="alert('open the tele popup')"> 
+                    <i class='fab fa-telegram fa-2x'></i>
+                </div>
+            </div>
+            <div class=divisor style="margin-top: 32px;">
+                <div class=divisor-line></div>
+                <div class=divisor-icon id=quick-links></div>
+                <div class=divisor-line></div>
+            </div>
+            <div class=quick-links>
+                <div class=quick-link-card>
+                    <div class=preview></div>
+                    <div class=quick-link-detail>
+                        <span class=quick-link-title>
+                            Title
+                        </span>
+                        <span class=quick-link-description>
+                            Description
+                        </span>
+                    </div>
+                    <div class=quick-link-action></div>
+                </div>
+            </div>
+            <div class=divisor style="margin-top: 32px;">
+                <div class=divisor-line></div>
+                <div class=divisor-icon id=projects></div>
+                <div class=divisor-line></div>
+            </div>
+            <div class=projects>
+                <div class=project-card>
+                    <div class=preview></div>
+                    <div class=project-detail>
+                        <span class=project-title>
+                            Title
+                        </span>
+                        <span class=project-description>
+                            Description
+                        </span>
+                    </div>
+                    <div class=project-action>action</div>
+                </div>
+                <div class=project-card>
+                    <div class=preview></div>
+                    <div class=project-detail>
+                        <span class=project-title>
+                            Title
+                        </span>
+                        <span class=project-description>
+                            Description
+                        </span>
+                    </div>
+                    <div class=project-action>action</div>
+                </div>
+                <div class=project-card>
+                    <div class=preview></div>
+                    <div class=project-detail>
+                        <span class=project-title>
+                            Title
+                        </span>
+                        <span class=project-description>
+                            De
+                        </span>
+                    </div>
+                    <div class=project-action>action</div>
+                </div>
+
             </div>
         </div>
-        <div class=divisor style="margin-top: 32px;">
-            <div class=divisor-line></div>
-            <div class=divisor-icon id=projects></div>
-            <div class=divisor-line></div>
+        <div class=footer>
+            <img class=footer-graphic src="./i/export.png">
+            <div class=footer-content>
+                <span> Some Sample Text </span>
+                <span> Some Sample Text </span>
+                <span> Some Sample Text </span>
+                <span> Some Sample Text </span>
+                <span onclick="window.location.href='http://icons8.com'">Icons by <u>Icons8.com</u></span>
+            </div>
         </div>
-        <div class=projects></div>
-    </div>
-    <div class=footer>
-        <img class=footer-graphic src="./i/export.png">
-        <div class=footer-content>
-            <span> Some Sample Text </span>
-            <span> Some Sample Text </span>
-            <span> Some Sample Text </span>
-            <span> Some Sample Text </span>
-            <span> Icons by <u>Icons8.com</u></span>
-        </div>
-    </div>
-
-
-    </div>
-
-</body>
-
+    </body>
 </html>
