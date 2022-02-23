@@ -129,6 +129,11 @@ i {
     display: flex;
     justify-content: center;
 }
+.quick-links {
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
 .quick-link-card {
     display: flex;
     align-items: center;
@@ -137,7 +142,11 @@ i {
     width: 86vw;
     background: white;
     padding: 16px;
-}          
+	margin: 6px 0;
+}
+#hidden {
+	display: none;
+}
 .preview {
     height: 100%;
     width: 256px;
@@ -356,4 +365,9 @@ a {
 .popup-action:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+.empty {
+	margin: 132px 0 164px 0;
+	color: #caad8e;
+	text-align: center;
 }
