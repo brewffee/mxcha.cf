@@ -1,3 +1,6 @@
+html { 
+    scroll-behavior: smooth;
+}
 body {
     background: #caad8e;
     margin: 16px;
@@ -112,13 +115,13 @@ i {
     background: #caad8e;
     height: 80px;
 }
-#cards {
+#cards-i {
     background: url('./i/icons8-heart-48.png') no-repeat;
 }
-#quick-links {
+#quick-links-i {
     background: url('./i/icons8-link-48.png') no-repeat;
 }
-#projects {
+#projects-i {
     background: url('./i/icons8-apps-tab-48.png') no-repeat;
 }
 .quick-links, .projects {
