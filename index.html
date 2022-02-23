@@ -12,6 +12,14 @@
 				console.log(document.getElementById(x).parentElement)
 				document.getElementById(y).style.display = 'flex';
 			}
+            const delmod = () => {
+                document.getElementById('bo').style.display = 'none';
+                document.getElementById('mo').style.display = 'none';
+            } 
+            const showmod = () => {
+                document.getElementById('bo').style.display = 'block';
+                document.getElementById('mo').style.display = 'flex';
+            } 
 		</script>
 		<title>☕ mxcha.cf ☕</title>
     </head>
@@ -159,8 +167,23 @@
                 <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
 				<div style="height: 48px"></div>
 				<span> Made with ♡ by mxcha </span>
-				<span style="font-size: 1em;margin-top: -24px;" onclick="alert('confirmation dialog')"> Show all content </span>
+				<span style="font-size: 1em;margin-top: -24px;" onclick="showmod()"> Show all content </span>
             </div>
         </div>
+        <div class=overlay id=bo></div>
+        <div class=popup id=mo> 
+            <div class=popup-content>
+                <div class=popup-text>
+                    <span> Are you sure you want to enable all site content? </span>
+                </div>
+                <div class=popup-buttons>
+                    <div class=popup-action onclick="alert('set showAllContent cookie');delmod()">
+                        <span> Yes </span>
+                    </div>
+                    <div class=popup-action onclick="delmod()">
+                        <span> No </span>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
