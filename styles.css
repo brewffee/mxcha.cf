@@ -98,13 +98,12 @@ i {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 20%;
 }
 .navbar-right {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
+
 }
 .nav-underlay {
     position: fixed;
