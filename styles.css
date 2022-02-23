@@ -17,6 +17,7 @@ body {
     font-weight: bold;
     font-size: 2.5em;
     margin-top: 78px;
+    user-select: none;
 }
 .card-e-outer, .card-o-inner {
     display: flex;
@@ -175,8 +176,6 @@ i {
     flex-direction: row;
     justify-content: space-between;
     padding: 24px 0 ;
-
-
 }
 .footer-graphic {
     height: 456px;
@@ -197,6 +196,7 @@ i {
     font-size: 2em;
     padding: 16px;
     text-align: right;
+    user-select: none;
 }
 .footer-content > span:hover {
     color: #caad8e;
