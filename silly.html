@@ -4,14 +4,17 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
+		<audio id="audio">
+			<source src="pop.mp3">
+		</audio>
         <script>
-            // later
+            const silly = () => document.getElementById('audio').play();
 		</script>
-		<title>owo what's this?</title>
+		<title>hee hee</title>
     </head>
     <body style="overflow:hidden">
         <div class=content-e6 style="height: calc(100vh - 136px);">
-            <!-- silly graphic :3c -->
+            <div class=graphic onclick="silly()"></div>
         </div>
     </body>
 </html>

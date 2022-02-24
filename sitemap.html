@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
+        <script>
+            const delmod = () => {
+                document.getElementById('bo').style.display = 'none';
+                document.getElementById('mo').style.display = 'none';
+            } 
+            const showmod = () => {
+                document.getElementById('bo').style.display = 'block';
+                document.getElementById('mo').style.display = 'flex';
+            } 
+
+            // check if the showAllContent cookie is set
+            if(document.cookie.includes('showAllContent=true')) {
+                const style = document.createElement('style')
+                style.innerHTML = '#hidden { display: flex; } #empty-ql { display: none; }';
+                document.head.appendChild(style);
+            }
+		</script>
+		<title>☕ mxcha.cf - sitemap ☕</title>
+    </head>
+    <body>
+        <div class=nav-underlay></div>
+        <div class=navbar>
+			<div class="navbar-left">
+				<span class="navbar-text" onclick="window.location.href='https://mxcha.cf'"> mxcha.cf </span> 
+                <span class="navbar-text-sub" onclick="window.location.href='https://mxcha.cf/sitemap'"> > sitemap</span>
+			</div>
+		</div>
+        <div class=content-e6>
+			<div class=maptree>
+				<div><span class=maptree-tl>mxcha.cf</span><div class=tree-fl id=tl></div></div>
+				
+				<div><span class=maptree-l2>create-shortcut-nemo-action.tar.gz</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>ebin.html</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>gooby (real!!).zip</span><div class=tree-fl id=l2></div></div>
+				<div id=hidden><span class=maptree-l2>goods.html</span><div class=tree-fl id=l2></div></div>
+
+				<div><span class=maptree-l2>old</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l3>amogsus.png</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>discord.html</span><div class=tree-fl id=l3></div></div>
+				<div id=hidden><span class=maptree-l3>e621-desktop.exe</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>femEs_.mov</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>FreeFPS.rar</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>gamemen.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>github.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>index.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>mc.mp4</span><div class=tree-fl id=l3></div></div>
+				<div id=hidden><span class=maptree-l3>MYFUCKINCATYO.png</span><div class=tree-fl id=l3></div></div>
+				<div id=hidden><span class=maptree-l3>nO1pb6VomMKPTEfh.mp4</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>tiky.zip</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>twitter.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>urmrgay.mp4</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>vsink.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>week7.zip</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>y.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>youtube.html</span><div class=tree-fl id=l3></div></div>
+				<div><span class=maptree-l3>yt.html</span><div class=tree-fl id=l3></div></div>
+			
+				<div><span class=maptree-l2>pronouns</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>silly</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>sitemap</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>uwu</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>vsink-devbuild_417.zip</span><div class=tree-fl id=l2></div></div>
+				<div><span class=maptree-l2>vsink_src.zip</span><div class=tree-fl id=l2></div></div>
+			</div>
+        </div>
+        <div class=footer>
+            <img class=footer-graphic src="./i/export.png">
+            <div class=footer-content>
+                <span> Some Sample Text </span>
+                <span onclick="window.location.href='./sitemap.html'"> Sitemap </span>
+                <span onclick="window.location.href='https://github.com/mxchakitty/mxcha.cf'"> View source code </span>
+                <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
+				<div style="height: 48px"></div>
+				<span onclick="window.location.href='./silly.html'"> Made with ♡ by mxcha </span>
+				<span style="font-size: 1em;margin-top: -24px;" onclick="showmod()"> Show all content </span>
+            </div>
+        </div>
+		<div class=overlay id=bo></div>
+        <div class=popup id=mo> 
+            <div class=popup-content>
+                <div class=popup-text>
+                    <span> Are you sure you want to enable all site content? </span>
+                </div>
+                <div class=popup-buttons>
+                    <div class=popup-action onclick="document.cookie = 'showAllContent=true'; delmod(); window.location.reload()">
+                        <span> Yes </span>
+                    </div>
+                    <div class=popup-action onclick="delmod()">
+                        <span> No </span>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

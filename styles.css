@@ -382,6 +382,9 @@ a {
 	color: #caad8e;
 	text-align: center;
 }
+#empty-pr {
+	margin: 132px 0 198px 0;
+}
 
 /* for e621 */
 .content-e6 {
@@ -415,4 +418,55 @@ a {
     width: 60%;
     height: 48px;
     margin: 24px 0 0 0;
+}
+/* for silly */
+.graphic {
+	width: 456px;
+	height: 456px;
+	background: white;
+}
+.graphic:hover {
+	width: 472px;
+	height: 472px;
+	cursor: pointer;
+}
+.graphic:active {
+	width: 456px;
+	height: 456px;
+}
+/* for sitemap (I WILL MAKE ALL THESE SEP FILES LATER LOL) */
+.maptree {
+	width: 80%;
+	padding: 128px;
+}
+.maptree > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.maptree > div > span {
+	white-space: nowrap;
+}
+.tree-fl {
+	width: 100%;
+	height: 8px;
+	margin: 0 32px;
+	background: white;
+}
+.maptree-tl {
+	color: white;
+}
+.maptree-l2 {
+	color: #f2e2d3;
+	margin-left: 48px;
+}
+#l2 {
+	background: #f2e2d3;
+}
+.maptree-l3 {
+	color: #dfcebd;
+	margin-left: 92px;
+}
+#l3 {
+	background: #dfcebd;
 }
