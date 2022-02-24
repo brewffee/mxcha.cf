@@ -1,3 +1,5 @@
+/* ill work out smaller screen stuff later lol */
+
 html { 
     scroll-behavior: smooth;
 }
@@ -95,7 +97,15 @@ i {
 	margin: 0 12px;
 	user-select: none;
 }
-.navbar-text:hover {
+.navbar-text-sub {
+	color: #96836f;
+	font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+
+	user-select: none;
+}
+.navbar-text:hover, .navbar-text-sub:hover {
 	cursor: pointer;
 }
 .navbar-left {
@@ -166,7 +176,8 @@ i {
     color: #caad8e;
 }
 .quick-link-description {
-    font-size: 0.8em;
+    font-size: 0.6em;
+    width: 60%;
     font-weight: bold;
 }
 .quick-link-action {
@@ -370,4 +381,38 @@ a {
 	margin: 132px 0 164px 0;
 	color: #caad8e;
 	text-align: center;
+}
+
+/* for e621 */
+.content-e6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 78px 0 24px 0;
+    background: #15151570;
+    width: 100%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    user-select: none;
+}
+.viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 72vh;
+    background: black;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    width: 60%;
+    height: 48px;
+    margin: 24px 0 0 0;
 }

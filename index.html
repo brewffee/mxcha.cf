@@ -20,6 +20,13 @@
                 document.getElementById('bo').style.display = 'block';
                 document.getElementById('mo').style.display = 'flex';
             } 
+
+            // check if the showAllContent cookie is set
+            if(document.cookie.includes('showAllContent=true')) {
+                const style = document.createElement('style')
+                style.innerHTML = '#hidden { display: flex; } #empty-ql { display: none; }';
+                document.head.appendChild(style);
+            }
 		</script>
 		<title>☕ mxcha.cf ☕</title>
     </head>
@@ -61,6 +68,7 @@
 					<div class=card-content id=twts>
 						<div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchakitty">mxchakitty</a> </span></div>
 						<div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchanyaa">mxchanyaa</a> </span></div>
+                        <div id=hidden><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/creamymxcha">creamymxcha</a> </span></div>
 					</div>
                 </div>
                 <div class="card-o-outer card-normal" onclick="vsocial('dsc', 'dscs')">
@@ -104,30 +112,20 @@
             </div>
             <anchor id=projects></anchor>
             <div class=quick-links>
-                <div class=quick-link-card>
-                    <div class=preview></div>
-                    <div class=quick-link-detail>
-                        <span class=quick-link-title>
-                            Title
-                        </span>
-                        <span class=quick-link-description>
-                            Description
-                        </span>
-                    </div>
-                    <div class=quick-link-action></div>
-                </div>
+                <span class=empty id="empty-ql"> quick links are <br />coming soon ! </span>
+                <!-- hide above span if the content cookie is enabled -->
 				<!-- require the content cookie -->
 				<div class=quick-link-card id=hidden>
                     <div class=preview></div>
                     <div class=quick-link-detail>
                         <span class=quick-link-title>
-							Card 2 
+                            owo what's this?
                         </span>
                         <span class=quick-link-description>
-                            Description
+                            an image viewer that randomly picks an image from my e621 favorites
                         </span>
                     </div>
-                    <div class=quick-link-action></div>
+                    <div class=quick-link-action onclick="window.location.href ='./uwu.html'"></div>
                 </div>
             </div>
             <div class=divisor style="margin-top: 32px;">
@@ -136,19 +134,19 @@
                 <div class=divisor-line></div>
             </div>
             <div class=projects>
-                <div class=project-card id=hidden>
+                <!--<div class=project-card id=hidden>
                     <div class=preview></div>
                     <div class=project-detail>
                         <span class=project-title>
                             Title
                         </span>
                         <span class=project-description>
-                            De
+                            Description
                         </span>
                     </div>
                     <div class=project-action>action</div>
-                </div>
-				<span class=empty> i'm not working on <br />anything at the moment </span>
+                </div>-->
+				<span class=empty> i'm not working on <br />anything at the moment ! </span>
 
             </div>
         </div>
@@ -171,7 +169,7 @@
                     <span> Are you sure you want to enable all site content? </span>
                 </div>
                 <div class=popup-buttons>
-                    <div class=popup-action onclick="alert('set showAllContent cookie');delmod()">
+                    <div class=popup-action onclick="document.cookie = 'showAllContent=true'; delmod(); window.location.reload()">
                         <span> Yes </span>
                     </div>
                     <div class=popup-action onclick="delmod()">
