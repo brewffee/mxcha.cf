@@ -4,9 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
-        <script>
-            // later
-		</script>
+
 		<title>owo what's this?</title>
     </head>
     <body>
@@ -16,28 +14,20 @@
 				<span class="navbar-text" onclick="window.location.href='https://mxcha.cf'"> mxcha.cf </span> 
                 <span class="navbar-text-sub" onclick="window.location.href='https://mxcha.cf/uwu'"> > uwu</span>
 			</div>
-			<div class="navbar-right">
-				<!-- maybe create better anchors for this later -->
-				<span class="navbar-text" onclick="window.location.href='#cards'"> action buttons here :3c </span>
-			</div>
 		</div>
         <div class=content-e6>
-            <div class=viewer>
-
-            </div>
-            <div class=controls>media controls here</div>
-        </div>
-        <div class=footer>
-            <img class=footer-graphic src="./i/export.png">
-            <div class=footer-content>
-                <span> Some Sample Text </span>
-                <span onclick="window.location.href='./sitemap.html'"> Sitemap </span>
-                <span onclick="window.location.href='https://github.com/mxchakitty/mxcha.cf'"> View source code </span>
-                <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
-				<div style="height: 48px"></div>
-				<span onclick="window.location.href='./silly.html'"> Made with ♡ by mxcha </span>
-				<span style="font-size: 1em;margin-top: -24px;" onclick="window.location.href='https://mxcha.cf'"> Back to home </span>
+            <img id="dest" class=viewer src=""></img>
+            <script>
+                document.getElementsByClassName('viewer')[0].src = 'longtest donot export.png';
+            </script>
+            <div class=controls>
+                <i class="fas fa-redo-alt" onclick="window.location.reload()"></i>
+                <i class="fas fa-th-list"></i>
+                <i class="fas fa-download"></i>
+                <i class="fas fa-copy"></i>
+                <i class="fas fa-info"></i>
             </div>
         </div>
+        <!-- removed as to not complicate things -->
     </body>
 </html>
