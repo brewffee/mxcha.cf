@@ -429,19 +429,17 @@ a {
     opacity: 0.5;
 }
 /* for silly */
-.graphic {
-	width: 456px;
-	height: 456px;
-	background: white;
+.graphic > img {
+	width: 128px;
+    display: flex;
+    image-rendering: pixelated;
 }
-.graphic:hover {
-	width: 472px;
-	height: 472px;
+.graphic:hover > img {
+	width: 136px;
 	cursor: pointer;
 }
-.graphic:active {
-	width: 456px;
-	height: 456px;
+.graphic:active > img {
+	width: 100px;
 }
 /* for sitemap (I WILL MAKE ALL THESE SEP FILES LATER LOL) */
 .maptree {
