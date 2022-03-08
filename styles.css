@@ -162,7 +162,17 @@ i {
     width: 256px;
     background: #caad8e;
     margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }  
+.preview > img {
+    width: 164px;
+}
+#pr2 {
+    width: 92px;
+}
 .quick-link-detail {
     width: 100%;
     display: flex;
