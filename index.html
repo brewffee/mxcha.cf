@@ -1,201 +1,224 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
-        <script>
-			const vsocial = (x, y) => {
-				document.getElementById(x).style.display = 'none';
-				document.getElementById(x).parentElement.classList.remove('card-normal')
-				document.getElementById(x).parentElement.classList.add('card-clicked')
-				console.log(document.getElementById(x).parentElement)
-				document.getElementById(y).style.display = 'flex';
-			}
-            const delmod = () => {
-                document.getElementById('bo').style.display = 'none';
-                document.getElementById('mo').style.display = 'none';
-            } 
-            const showmod = () => {
-                document.getElementById('bo').style.display = 'block';
-                document.getElementById('mo').style.display = 'flex';
-            } 
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
+    <script>
+      const vsocial = (x, y) => {
+        document.getElementById(x).style.display = 'none';
+        document.getElementById(x).parentElement.classList.remove('card-normal')
+        document.getElementById(x).parentElement.classList.add('card-clicked')
+        console.log(document.getElementById(x).parentElement)
+        document.getElementById(y).style.display = 'flex';
+      }
+      const delmod = () => {
+        document.getElementById('bo').style.display = 'none';
+        document.getElementById('mo').style.display = 'none';
+      }
+      const showmod = () => {
+        document.getElementById('bo').style.display = 'block';
+        document.getElementById('mo').style.display = 'flex';
+      }
 
-            // check if the showAllContent cookie is set
-            if(document.cookie.includes('showAllContent=true')) {
-                const style = document.createElement('style')
-                style.innerHTML = '#hidden { display: flex; } /*#empty-ql { display: none; }*/ #empty-pr { display: none; }';
-                document.head.appendChild(style);
-            }
-		</script>
-		<title>☕ mxcha.cf ☕</title>
-    </head>
-    <body>
-        <div class=nav-underlay></div>
-        <div class=navbar>
-			<div class="navbar-left">
-				<span class="navbar-text" onclick="window.location.href='https://mxcha.cf'"> mxcha.cf </span>
-			</div>
-			<div class="navbar-right">
-				<!-- maybe create better anchors for this later -->
-				<span class="navbar-text" onclick="window.location.href='#cards'"> socials </span>
-				<span class="navbar-text"> • </span>
-				<span class="navbar-text" onclick="window.location.href='#quick-links'"> links </span>
-				<span class="navbar-text"> • </span>
-				<span class="navbar-text" onclick="window.location.href='#projects'"> projects </span>
-			</div>
-		</div>
-        <div class=content>
-            <anchor id=cards></anchor>
-            <div class=head>mxcha.cf</div>
-            
-            <div class=divisor>
-                <div class=divisor-line></div>
-                <div class=divisor-icon id=cards-i></div>
-                <div class=divisor-line></div>
-            </div>
-            <div class=card-row>
-                <div class="card-o-outer card-normal" onclick="vsocial('gh', 'ghs')">
-                    <i class='fab fa-github fa-2x' id=gh></i>
-					<div class=card-content id=ghs>
-						<div><i class='fab fa-github'></i><span> <a href="https://github.com/mxchakitty">mxchakitty</a> </span></div>
-						<div><i class='fa fa-code'></i><span> <a href="https://github.com/mxchakitty/mxcha.cf">mxcha.cf</a> </span></div>
-						<div><i class='fa fa-code'></i><span> <a href="https://github.com/mxchakitty/electrify">electrify</a> </span></div>
-					</div>
-                </div>
-                <div class="card-o-inner card-normal" onclick="vsocial('twt', 'twts')">
-                    <i class='fab fa-twitter fa-2x' id=twt></i>
-					<div class=card-content id=twts>
-						<div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchakitty">mxchakitty</a> </span></div>
-						<div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchanyaa">mxchanyaa</a> </span></div>
-                        <div id=hidden><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/creamymxcha">creamymxcha</a> </span></div>
-					</div>
-                </div>
-                <div class="card-o-outer card-normal" onclick="vsocial('dsc', 'dscs')">
-                    <i class='fab fa-discord fa-2x' id=dsc></i>
-					<div class=card-content id=dscs>
-						<div><i class='fab fa-discord' onclick="alert('copy to clipboard')"></i><span> mochaa ♡#6834 </span></div>
-						<div><i class='fab fa-discord'></i><span> <a href="https://discord.gg/FZ5HUuJvvW">FZ5HUuJvvW</a> </span></div>
-					</div>
-                </div>
-            </div>
-            <div class=card-row>
-                <div class="card-e-outer card-normal" onclick="vsocial('yt', 'yts')">
-                    <i class='fab fa-youtube fa-2x' id=yt></i>
-					<div class=card-content id=yts>
-						<div><i class='fab fa-youtube'></i><span> <a href="https://www.youtube.com/channel/UC9jxCcERd-y6TzMpb4qVMxQ">mxchakitty</a> </span></div>
-						<!-- i need to add some js for fetching the latest video here soon
-							in the meantime, im just manually linking it -->
-						<div><i class='fa fa-video'></i><span> <a href="https://www.youtube.com/watch?v=WgctMO8GCGc">latest video</a> </span></div>
-					</div>
-                </div>
-                <div class="card-e-inner card-normal" onclick="vsocial('st', 'sts')">
-                    <i class='fab fa-steam fa-2x' id=st></i>
-					<div class=card-content id=sts>
-						<div><i class='fab fa-steam'></i><span> <a href="https://steamcommunity.com/id/mxchakitty/">mxchakitty</a> </span></div>
-						<div><i class='fa fa-key' onclick="alert('copy to clipboard')"></i><span> 347291161 </span></div>
-						<div><i class='fa fa-gamepad'></i><span> <a href="https://steamcommunity.com/id/mxchakitty/games/?tab=all">library</a> </span></div>
-					</div>
-                </div>
-                <anchor id=quick-links></anchor>
-                <div class="card-e-outer card-normal" onclick="vsocial('tg', 'tgs')"> 
-                    <i class='fab fa-telegram fa-2x' id=tg></i>
-					<div class=card-content id=tgs>
-						<div><i class='fab fa-telegram'></i><span> <a href="https://t.me/mxchakitty">mxchakitty</a> </span></div>
-					</div>
-                </div>
-            </div>
-            <div class=divisor style="margin-top: 32px;">
-                <div class=divisor-line></div>
-                <div class=divisor-icon id=quick-links-i></div>
-                <div class=divisor-line></div>
-            </div>
-            <anchor id=projects></anchor>
-            <div class=quick-links>
-                <span class=empty id="empty-ql"> quick links are <br />coming soon ! </span>
-                <!-- hide above span if the content cookie is enabled -->
-				<!-- require the content cookie -->
+      // check if the showAllContent cookie is set
+      if (document.cookie.includes('showAllContent=true')) {
+        const style = document.createElement('style')
+        style.innerHTML = '#hidden { display: flex; } /*#empty-ql { display: none; }*/ #empty-pr { display: none; }';
+        document.head.appendChild(style);
+      }
+    </script>
+    <title>☕ mxcha.cf ☕</title>
+  </head>
+  <body>
+    <div class=nav-underlay></div>
+    <div class=navbar>
+      <div class="navbar-left">
+        <span class="navbar-text" onclick="window.location.href='https://mxcha.cf'"> mxcha.cf </span>
+      </div>
+      <div class="navbar-right">
+        <!-- maybe create better anchors for this later -->
+        <span class="navbar-text" onclick="window.location.href='#cards'"> socials </span>
+        <span class="navbar-text"> • </span>
+        <span class="navbar-text" onclick="window.location.href='#quick-links'"> links </span>
+        <span class="navbar-text"> • </span>
+        <span class="navbar-text" onclick="window.location.href='#projects'"> projects </span>
+      </div>
+    </div>
+    <div class=content>
+      <anchor id=cards></anchor>
+      <div class=head>mxcha.cf</div>
 
-				<!-- need to finish this as a proj before i make it a link -->
-                <!--<div class=quick-link-card id=hidden>
-                    <div class=preview></div>
-                    <div class=quick-link-detail>
-                        <span class=quick-link-title>
-                            owo what's this?
-                        </span>
-                        <span class=quick-link-description>
-                            an image viewer that randomly picks an image from my e621 favorites
-                        </span>
-                    </div>
-                    <div class=quick-link-action onclick="window.location.href ='./uwu.html'"></div>
-                </div>-->
+      <div class=divisor>
+        <div class=divisor-line></div>
+        <div class=divisor-icon id=cards-i></div>
+        <div class=divisor-line></div>
+      </div>
+      <div class=card-row>
+        <div class="card-o-outer card-normal" onclick="vsocial('gh', 'ghs')">
+          <i class='fab fa-github fa-2x' id=gh></i>
+          <div class=card-content id=ghs>
+            <div><i class='fab fa-github'></i><span> <a href="https://github.com/mxchakitty">mxchakitty</a> </span></div>
+            <div><i class='fa fa-code'></i><span> <a href="https://github.com/mxchakitty/mxcha.cf">mxcha.cf</a> </span>
             </div>
-            <div class=divisor style="margin-top: 32px;">
-                <div class=divisor-line></div>
-                <div class=divisor-icon id=projects-i></div>
-                <div class=divisor-line></div>
+            <div><i class='fa fa-code'></i><span> <a href="https://github.com/mxchakitty/electrify">electrify</a> </span>
             </div>
-            <div class=projects>
-                <div class=project-card id=hidden>
-                    <div class=preview>
-                        <img src="./i/project1.png">
-                    </div>
-                    <div class=project-detail>
-                        <span class=project-title>
-                            owo what's this?
-                        </span>
-                        <span class=project-description>
-                            an image viewer that randomly picks an image from my e621 favorites
-                        </span>
-                    </div>
-                    <!-- no action available for this project -->
-                    <!-- <div class=project-action>action</div> -->
-                </div>
-                <div class=project-card>
-                    <div class=preview>
-                        <img src="./i/project2.png" id="pr2">
-                    </div>
-                    <div class=project-detail>
-                        <span class=project-title>
-                            characters
-                        </span>
-                        <span class=project-description>
-                            place where i dump my ocs lol
-                        </span>
-                    </div>
-                    <!-- no action available for this project -->
-                    <!-- <div class=project-action>action</div> -->
-                </div>
-				<!-- <span id="empty-pr" class=empty> i'm not working on <br />anything at the moment ! </span> -->
-
-            </div>
+          </div>
         </div>
-        <div class=footer>
-            <img class=footer-graphic src="./i/export.png">
-            <div class=footer-content>
-                <span onclick="window.location.href='https://ko-fi.com/mxchakitty'"> Donate </span>
-                <span onclick="window.location.href='./sitemap.html'"> Sitemap </span>
-                <span onclick="window.location.href='https://github.com/mxchakitty/mxcha.cf'"> View source code </span>
-                <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
-				<div style="height: 48px"></div>
-				<span onclick="window.location.href='./silly.html'"> Made with ♡ by mxcha </span>
-				<span style="font-size: 1em;margin-top: -24px;" onclick="showmod()"> Show all content </span>
+        <div class="card-o-inner card-normal" onclick="vsocial('twt', 'twts')">
+          <i class='fab fa-twitter fa-2x' id=twt></i>
+          <div class=card-content id=twts>
+            <div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchakitty">mxchakitty</a> </span>
             </div>
+            <div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchanyaa">mxchanyaa</a> </span></div>
+            <div id=hidden><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/creamymxcha">creamymxcha</a>
+              </span></div>
+          </div>
         </div>
-        <div class=overlay id=bo></div>
-        <div class=popup id=mo> 
-            <div class=popup-content>
-                <div class=popup-text>
-                    <span> Are you sure you want to enable all site content? </span>
-                </div>
-                <div class=popup-buttons>
-                    <div class=popup-action onclick="document.cookie = 'showAllContent=true'; delmod(); window.location.reload()">
-                        <span> Yes </span>
-                    </div>
-                    <div class=popup-action onclick="delmod()">
-                        <span> No </span>
-                    </div>
-                </div>
-            </div>
-    </body>
+        <div class="card-o-outer card-normal" onclick="vsocial('dsc', 'dscs')">
+          <i class='fab fa-discord fa-2x' id=dsc></i>
+          <div class=card-content id=dscs>
+            <div><i class='fab fa-discord' onclick="alert('copy to clipboard')"></i><span> mochaa ♡#6834 </span></div>
+            <div><i class='fab fa-discord'></i><span> <a href="https://discord.gg/FZ5HUuJvvW">FZ5HUuJvvW</a> </span></div>
+          </div>
+        </div>
+      </div>
+      <div class=card-row>
+        <div class="card-e-outer card-normal" onclick="vsocial('yt', 'yts')">
+          <i class='fab fa-youtube fa-2x' id=yt></i>
+          <div class=card-content id=yts>
+            <div><i class='fab fa-youtube'></i><span> <a
+                  href="https://www.youtube.com/channel/UC9jxCcERd-y6TzMpb4qVMxQ">mxchakitty</a> </span></div>
+            <!-- i need to add some js for fetching the latest video here soon
+                in the meantime, im just manually linking it -->
+            <div><i class='fa fa-video'></i><span> <a href="https://www.youtube.com/watch?v=WgctMO8GCGc">latest video</a>
+              </span></div>
+          </div>
+        </div>
+        <div class="card-e-inner card-normal" onclick="vsocial('st', 'sts')">
+          <i class='fab fa-steam fa-2x' id=st></i>
+          <div class=card-content id=sts>
+            <div><i class='fab fa-steam'></i><span> <a href="https://steamcommunity.com/id/mxchakitty/">mxchakitty</a>
+              </span></div>
+            <div><i class='fa fa-key' onclick="alert('copy to clipboard')"></i><span> 347291161 </span></div>
+            <div><i class='fa fa-gamepad'></i><span> <a
+                  href="https://steamcommunity.com/id/mxchakitty/games/?tab=all">library</a> </span></div>
+          </div>
+        </div>
+        <anchor id=quick-links></anchor>
+        <div class="card-e-outer card-normal" onclick="vsocial('tg', 'tgs')">
+          <i class='fab fa-telegram fa-2x' id=tg></i>
+          <div class=card-content id=tgs>
+            <div><i class='fab fa-telegram'></i><span> <a href="https://t.me/mxchakitty">mxchakitty</a> </span></div>
+          </div>
+        </div>
+      </div>
+      <div class=divisor style="margin-top: 32px;">
+        <div class=divisor-line></div>
+        <div class=divisor-icon id=quick-links-i></div>
+        <div class=divisor-line></div>
+      </div>
+      <anchor id=projects></anchor>
+      <div class=quick-links>
+        <span class=empty id="empty-ql"> quick links are <br />coming soon ! </span>
+        <!-- hide above span if the content cookie is enabled -->
+        <!-- require the content cookie -->
+
+        <!-- need to finish this as a proj before i make it a link -->
+        <!--<div class=quick-link-card id=hidden>
+          <div class=preview></div>
+          <div class=quick-link-detail>
+            <span class=quick-link-title>
+              owo what's this?
+            </span>
+            <span class=quick-link-description>
+              an image viewer that randomly picks an image from my e621 favorites
+            </span>
+          </div>
+          <div class=quick-link-action onclick="window.location.href ='./uwu.html'"></div>
+        </div>-->
+      </div>
+      <div class=divisor style="margin-top: 32px;">
+        <div class=divisor-line></div>
+        <div class=divisor-icon id=projects-i></div>
+        <div class=divisor-line></div>
+      </div>
+      <div class=projects>
+        <div class=project-card id=hidden>
+          <div class=preview>
+            <img src="./i/project1.png">
+          </div>
+          <div class=project-detail>
+            <span class=project-title>
+              owo what's this?
+            </span>
+            <span class=project-description>
+              an image viewer that randomly picks an image from my e621 favorites
+            </span>
+          </div>
+          <!-- no action available for this project -->
+          <!-- <div class=project-action>action</div> -->
+        </div>
+        <div class=project-card>
+          <div class=preview>
+            <img src="./i/project2.png" id="pr2">
+          </div>
+          <div class=project-detail>
+            <span class=project-title>
+              characters
+            </span>
+            <span class=project-description>
+              place where i dump my ocs lol
+            </span>
+          </div>
+          <!-- no action available for this project -->
+          <!-- <div class=project-action>action</div> -->
+        </div>
+        <div class=project-card>
+          <div class=preview>
+            <img src="./i/project3.png" id="pr2">
+          </div>
+          <div class=project-detail>
+            <span class=project-title>
+              gallery
+            </span>
+            <span class=project-description>
+              a place to showcase my art 
+            </span>
+          </div>
+          <!-- no action available for this project -->
+          <!-- <div class=project-action>action</div> -->
+        </div>
+        <!-- <span id="empty-pr" class=empty> i'm not working on <br />anything at the moment ! </span> -->
+
+      </div>
+    </div>
+    <div class=footer>
+      <img class=footer-graphic src="./i/export.png">
+      <div class=footer-content>
+        <span onclick="window.location.href='https://ko-fi.com/mxchakitty'"> Donate </span>
+        <span onclick="window.location.href='./sitemap.html'"> Sitemap </span>
+        <span onclick="window.location.href='https://github.com/mxchakitty/mxcha.cf'"> View source code </span>
+        <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
+        <div style="height: 48px"></div>
+        <span onclick="window.location.href='./silly.html'"> Made with ♡ by mxcha </span>
+        <span style="font-size: 1em;margin-top: -24px;" onclick="showmod()"> Show all content </span>
+      </div>
+    </div>
+    <div class=overlay id=bo></div>
+    <div class=popup id=mo>
+      <div class=popup-content>
+        <div class=popup-text>
+          <span> Are you sure you want to enable all site content? </span>
+        </div>
+        <div class=popup-buttons>
+          <div class=popup-action onclick="document.cookie = 'showAllContent=true'; delmod(); window.location.reload()">
+            <span> Yes </span>
+          </div>
+          <div class=popup-action onclick="delmod()">
+            <span> No </span>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>
