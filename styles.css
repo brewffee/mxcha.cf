@@ -396,8 +396,7 @@ a {
 	margin: 132px 0 198px 0;
 }
 
-/* for e621 */
-.content-e6 {
+.content-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -410,33 +409,6 @@ a {
     font-weight: bold;
     font-size: 2.5em;
     user-select: none;
-}
-.viewer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 12vh;
-    max-width: 60%; /* im fucking lost omg */
-    background: black;
-}
-.controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 12px;
-    background: #998168;
-    width: 60%;
-    height: 48px;
-    margin: 24px 0 0 0;
-}
-.controls > i {
-    margin: 0 24px;
-}
-.controls > i:hover {
-    cursor: pointer;
-    opacity: 0.5;
 }
 /* for silly */
 .graphic > img {

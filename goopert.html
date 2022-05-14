@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/b0a29d08ad.js" crossorigin="anonymous"></script>
+		<script>
+            // when the page is resizing, resize makerheight to match 
+            // its width + settings' height and margin
+            window.onload  = () => {
+            const resize = () => {
+                const settings = document.getElementById('settings');
+                const maker = document.getElementById('maker');
+                maker.style.height = settings.offsetWidth + settings.offsetHeight + 'px';
+            }
+
+            // when the page is resizing, resize makerheight to match
+            // its width + settings' height and margin
+            window.addEventListener('resize', resize);
+            resize();
+        }
+        </script>
+        <title>hee hee</title>
+        <style>
+            .content {
+                flex-direction: row;
+                margin: 0;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                height: 100%;
+            }
+            .border {
+                margin: 24px 24px;
+                background: url("i/silly.png") repeat-y;
+                width: 100px;
+                height: 90%;
+                background-repeat: space;
+                image-rendering: pixelated;
+            }
+            .maker {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 -24px;
+                border: 24px solid #caad8e;
+            }
+            .le-gooper-container {
+                height: 512px;
+                width: 512px;
+                background: white;
+            }
+            .settings {
+                height: 512px;   
+                width: 256px;
+                background: #7b6a59;
+            }
+
+        </style>
+
+    </head>
+    <body style="height: calc(100vh - 32px)">
+        <div class=content>
+            <div class="border"></div>
+            <div class="maker">
+                <div class="settings"></div>
+                <div class="le-gooper-container"></div>
+            </div>
+            <div class="border"></div>
+        </div>
+    </body>
+</html>

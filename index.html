@@ -12,21 +12,6 @@
         console.log(document.getElementById(x).parentElement)
         document.getElementById(y).style.display = 'flex';
       }
-      const delmod = () => {
-        document.getElementById('bo').style.display = 'none';
-        document.getElementById('mo').style.display = 'none';
-      }
-      const showmod = () => {
-        document.getElementById('bo').style.display = 'block';
-        document.getElementById('mo').style.display = 'flex';
-      }
-
-      // check if the showAllContent cookie is set
-      if (document.cookie.includes('showAllContent=true')) {
-        const style = document.createElement('style')
-        style.innerHTML = '#hidden { display: flex; } /*#empty-ql { display: none; }*/ #empty-pr { display: none; }';
-        document.head.appendChild(style);
-      }
     </script>
     <title>☕ mxcha.cf ☕</title>
   </head>
@@ -69,8 +54,6 @@
             <div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchakitty">mxchakitty</a> </span>
             </div>
             <div><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/mxchanyaa">mxchanyaa</a> </span></div>
-            <div id=hidden><i class='fab fa-twitter'></i><span> <a href="https://twitter.com/creamymxcha">creamymxcha</a>
-              </span></div>
           </div>
         </div>
         <div class="card-o-outer card-normal" onclick="vsocial('dsc', 'dscs')">
@@ -119,21 +102,6 @@
       <anchor id=projects></anchor>
       <div class=quick-links>
         <span class=empty id="empty-ql"> quick links are <br />coming soon ! </span>
-        <!-- hide above span if the content cookie is enabled -->
-
-        <!-- need to finish this as a proj before i make it a link -->
-        <!--<div class=quick-link-card id=hidden>
-          <div class=preview></div>
-          <div class=quick-link-detail>
-            <span class=quick-link-title>
-              owo what's this?
-            </span>
-            <span class=quick-link-description>
-              an image viewer that randomly picks an image from my e621 favorites
-            </span>
-          </div>
-          <div class=quick-link-action onclick="window.location.href ='./uwu.html'"></div>
-        </div>-->
       </div>
       <div class=divisor style="margin-top: 32px;">
         <div class=divisor-line></div>
@@ -141,21 +109,6 @@
         <div class=divisor-line></div>
       </div>
       <div class=projects>
-        <div class=project-card id=hidden>
-          <div class=preview>
-            <img src="./i/project1.png">
-          </div>
-          <div class=project-detail>
-            <span class=project-title>
-              owo what's this?
-            </span>
-            <span class=project-description>
-              an image viewer that randomly picks an image from my e621 favorites
-            </span>
-          </div>
-          <!-- no action available for this project -->
-          <!-- <div class=project-action>action</div> -->
-        </div>
         <div class=project-card>
           <div class=preview>
             <img src="./i/project2.png" id="pr2">
@@ -201,23 +154,7 @@
         <span onclick="window.location.href='https://icons8.com'">Icons by <u>Icons8.com</u></span>
         <div style="height: 48px"></div>
         <span onclick="window.location.href='./silly.html'"> Made with ♡ by mxcha </span>
-        <span style="font-size: 1em;margin-top: -24px;" onclick="showmod()"> Show all content </span>
       </div>
     </div>
-    <div class=overlay id=bo></div>
-    <div class=popup id=mo>
-      <div class=popup-content>
-        <div class=popup-text>
-          <span> Are you sure you want to enable all site content? </span>
-        </div>
-        <div class=popup-buttons>
-          <div class=popup-action onclick="document.cookie = 'showAllContent=true'; delmod(); window.location.reload()">
-            <span> Yes </span>
-          </div>
-          <div class=popup-action onclick="delmod()">
-            <span> No </span>
-          </div>
-        </div>
-      </div>
   </body>
 </html>
